@@ -8,7 +8,7 @@ Having the HTML extension at the end of a file name is sort of ugly. Webservers 
 
 New project that we're just planning out right now
 
-### TECHNICAL_DETAILS
+### Technical Details
 
 * End goal is to have a Docker image that can be referenced in container based deployments of websites.
 * Will most likely be able to find something on Stackoverflow that accomplishes our goals
