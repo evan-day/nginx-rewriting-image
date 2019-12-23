@@ -12,7 +12,7 @@ jobs:
       env:
         docker_login: ${{ secrets.PACKAGE_REGISTRY_TOKEN }}
       run: |
-        docker build . --file Dockerfile --tag INITIAL_TAG:latest
-        docker tag INITIAL_TAG:latest docker.pkg.github.com/evan-day/GITHUB_PACKAGE_REGISTRY:latest
+        docker build . --file Dockerfile --tag nginx-rewrite:latest
+        docker tag nginx-rewrite:latest docker.pkg.github.com/evan-day/nginx-rewriting-image/nginx-rewrite-dev:latest
         docker login docker.pkg.github.com --username evan-day --password $docker_login
-        docker push docker.pkg.github.com/evan-day/GITHUB_PACKAGE_REGISTRY:latest
+        docker push docker.pkg.github.com/evan-day/nginx-rewriting-image/nginx-rewrite-dev:latest
