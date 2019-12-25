@@ -1,12 +1,14 @@
 # Nginx URL Rewrite Image
 
-**Project Overview**
+Rewrite URLs for static content to make them look a whole lot prettier.
 
-Having the HTML extension at the end of a file name is sort of ugly. Webservers can handle rewrites so that a request for a file will remove that file extension but preserve the content. The idea here, is to write a Docker image using Nginx as the base layer so that this can happen inside a container. With this, we could then use the new image as the base for any static websites that we want to run
+## Project Overview
 
-### Status - Initial Stages
+Based on this answer from [StackOverflow](https://stackoverflow.com/questions/38228393/nginx-remove-html-extension), we use the configuration listed in the initial question and the location block used in the accepted answer. Using the Nginx image as a base, we pass in this configuration file to be the default configuration. We then build the Docker image and publish it to Github Packages. Since we use the same, default location for storing static content, we can just replace the use of Nginx in any image with this image.
 
-New project that we're just planning out right now
+### Status - Ready For Production
+
+The development branch for this project was merged in to master and we can now find the production image within the packages for the repository.
 
 ### Technical Details
 
