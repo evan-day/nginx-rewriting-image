@@ -15,3 +15,7 @@ The development branch for this project was merged in to master and we can now f
 * End goal is to have a Docker image that can be referenced in container based deployments of websites.
 * Will most likely be able to find something on Stackoverflow that accomplishes our goals
 * Passing in an Nginx configuration file as part of a Docker build from the base nginx image, will most likely be all that we need to do
+
+### Known Issues
+
+* In Kubernetes, attempting to access a HTML file directly appears to eventually cause a time out. Workaround will be to any links that are used in the websites will directly refer to the pretty URL and not the file itself
